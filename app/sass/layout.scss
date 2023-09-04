@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+@import "theme";
+
+/* Common Elements */
+
+// Navigation
+.navbar-toggler { background-color:transparent; background-image:none; width:36px; height:36px; border:none; cursor:pointer; padding:0; position:relative; transition:all 0.35s;
+    &,
+    * { outline:none; }
+    .icon-bar { display:block; background-color:$white; width:30px; height:4px; margin-bottom:6px; position:absolute; left:50%; transition:all 0.35s;
+        &.one { top:6px; transform:translate(-50%, -50%) rotate(0deg); }
+        &.two { top:17px; transform:translate(-50%, -50%) rotate(0deg); width:30px; height:4px; background-color:$white; }
+        &.three { top:28px; transform:translate(-50%, -50%) rotate(0deg); }
+    }
+    &.open { background-color:transparent;
+        .icon-bar { position:absolute; top:50%; left:50%;
+            &.one { transform:translate(-50%, -50%) rotate(45deg); z-index:1; }
+            &.two { transform:translate(-50%, -50%) rotate(0deg); width:36px; height:36px; background-color:transparent; z-index:0; }
+            &.three { transform:translate(-50%, -50%) rotate(-45deg); z-index: 1; }
+        }
+    }
+}
+.sf-menu.navbar-nav {
+    ul { display:none;
+        @include media-breakpoint-up(md) { width:auto; position:absolute; top:100%; left:0; z-index:99; background-color:$dark; }
+        &.level2 {
+            > li {
+                .nav-link { white-space:nowrap;
+                    &:hover,
+                    &:active,
+                    &:focus,
+                    &.active,
+                    &.current,
+                    &.section { color:$secondary !important; }
+                }
+            }
+        }
+        ul { top:0; left:100%; }
+    }
+    li { position:relative;
+        &:hover,
+        &.sfHover {
+            > ul { display: block; }
+        }
+    }
+    a { display:block; position:relative; }
+}
+
+img { max-width:100%; height:auto; }
+
+.placeholder { cursor:pointer; }
+
+.bios { column-gap:30px;
+    @include media-breakpoint-down(xs) { column-count:1; }
+    @include media-breakpoint-between(sm,md) { column-count:2; }
+    @include media-breakpoint-up(lg) { column-count:3; }
+}

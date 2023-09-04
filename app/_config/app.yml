@@ -1,0 +1,50 @@
+---
+Name: app
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+SilverStripe\Control\Email\Email:
+  admin_email:
+    no-reply@116andwest.com: '116 and West Website Admin'
+SilverStripe\Assets\Image_Backend:
+  properties:
+    Quality: 90
+SilverStripe\Assets\File:
+  allowed_extensions:
+    - svg
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - App\Extensions\SiteConfigExtension
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - public/css/cms.css
+SilverStripe\Control\Controller:
+  add_trailing_slash: true
+SilverStripe\UserForms\Model\UserDefinedForm:
+  block_default_userforms_js: true
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+  default_spam_protector: UndefinedOffset\NoCaptcha\Forms\NocaptchaProtector
+UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
+  site_key: "6LcHl0IUAAAAANA4ybYv7Z3gFWnFI5KZ9RgIk11V" #Your site key (required)
+  secret_key: "6LcHl0IUAAAAAAnbZp9VlNJqqKbwAfRMwibSuqOT" #Your secret key (required)
+  verify_ssl: true #Allows you to disable php-curl's SSL peer verification by setting this to false (optional, defaults to true)
+  default_theme: "light" #Default theme color (optional, light or dark, defaults to light)
+  default_type: "image" #Default captcha type (optional, image or audio, defaults to image)
+  default_size: "normal" #Default size (optional, normal, compact or invisible, defaults to normal)
+  default_badge: "bottomright" #Default badge position (bottomright, bottomleft or inline, defaults to bottomright)
+  proxy_server: "" #Your proxy server address (optional)
+  proxy_auth: "" #Your proxy server authentication information (optional)
+App\Model\BioPage:
+  defaults:
+    ShowInMenus: false
+SilverStripe\Core\Injector\Injector:
+  TheWebmen\WebpImages\Assets\WebpGenerator:
+    properties:
+      enabled: true
+      quality: 75
+#---
+#Only:
+#  environment: 'dev'
+#---
+#SilverStripe\View\SSViewer:
+#  source_file_comments: true

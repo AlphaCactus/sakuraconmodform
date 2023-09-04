@@ -1,0 +1,11 @@
+RewriteEngine On
+RedirectMatch 404 /\.git
+RewriteRule ^(.*)$ public/$1
+
+<IfDefine STAGE>
+	<FilesMatch \.(php|phar)$>
+    # Select PHP version.
+    # %{HTTP_HOST} ensures domain routing is correct as fcgi://localhost is not reliable but is widely used in internet examples.
+		RewriteRule ^ - [H=proxy:unix:/var/opt/remi/php81/run/php-fpm/www.sock|fcgi://%{HTTP_HOST}]
+	</FilesMatch>
+</IfDefine>

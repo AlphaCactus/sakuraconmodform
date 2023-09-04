@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+html { font-size:10px; }
+
+body { font-size:1.6rem; }
+
+p,
+img { max-width:100%; height:auto; }
+
+
+.left {
+    &,
+    img { max-width:50%; height:auto; float:left; margin-right:12px; margin-bottom:12px; }
+}
+.right {
+    &,
+    img { max-width:50%; height:auto; float:right; margin-left:12px; margin-bottom:12px; }
+}
+.center,
+.leftAlone {
+    &,
+    img { max-width:100%; height:auto; float:none; margin-bottom:20px; display:block; }
+}
+
+.ss-broken { background-color:red; color:white; padding:1px; }
+a.ss-broken { text-decoration:underline; }

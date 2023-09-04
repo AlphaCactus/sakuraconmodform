@@ -1,0 +1,26 @@
+{
+  "name": "klundthosmer-front-end-tools",
+  "version": "1.1.0",
+  "description": "SASS and CSS auto compile tasks. Set up by Steven Mohr June 26, 2020, updated by Mastery Sheets August 2, 2021",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klundt-hosmer/silverstripe-boilerplate.git"
+  },
+  "devDependencies": {
+    "@lodder/grunt-postcss": "^3.0.1",
+    "autoprefixer": "^9.8.8",
+    "cssnano": "^5.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-watch": "^1.1",
+    "grunt-notify": "^0.4",
+    "grunt-sass": "^3.1",
+    "pixrem": "^5.0",
+    "postcss": "^8"
+  },
+  "dependencies": {
+    "sass": "^1.37.0",
+    "lodash": "^4.17.21",
+    "browserslist": "^4.16.6"
+  }
+}

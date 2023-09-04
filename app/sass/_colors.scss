@@ -1,0 +1,56 @@
+//Colors
+
+$black: #000;
+$gray-dk: rgba($black,.76);
+$gray:  #636466;
+$gray-md: #969696;
+$gray-lt: #dedede;
+$white: #fff;
+
+$gray-100: #f8f9fa;
+$gray-300: $gray-lt;
+$gray-600: $gray-md;
+$gray-700: $gray;
+$gray-800: $gray-dk;
+
+$blue: #06304e;
+$blue-lt: #71b8ff;
+$green: #5f9643;
+$green-wcag: darken($green,6%);
+$green-lt: #aac340;
+$yellow: #fcaf17;
+$gold: #c48e24;
+$gold-dark: darken($gold,10%);
+$orange: #d6632c;
+$orange-wcag: darken($orange,11%);
+$cranberry: #95294b;
+$red: $cranberry;
+$eggplant: #451952;
+
+$primary: $blue;
+$secondary: $orange;
+$tertiary: $eggplant;
+$success:       $green;
+$info:          $green-lt;
+$warning:       $gold;
+$danger:        $red;
+$light:         $gray-300;
+$dark:          $gray-800;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+        (
+            "primary":    $primary,
+            "secondary":  $secondary,
+            "tertiary":   $tertiary,
+            "success":    $success,
+            "info":       $info,
+            "warning":    $warning,
+            "danger":     $danger,
+            "light":      $light,
+            "dark":       $dark
+        ),
+        $theme-colors
+);
+

@@ -1,0 +1,33 @@
+ #To ignore just directories, add a slash at the end of the pattern. Otherwise it will ignore both files and directories.
+ #To ignore just files/directories at the root, add a slash at the beginning of the pattern. Otherwise it will ignore files/directories anywhere in your project.
+
+# PHPStorm project files
+/.idea/
+# Grunt processing cache
+/.sass-cache
+# Legacy SVN repo
+/.svn
+
+# cPanel PHP settings
+/.user.ini
+/php.ini
+
+
+# composer not likely here, but ignore anyway just in case
+/composer.phar
+# node.js modules for Grunt
+/node_modules/
+# Silvertripe Assets
+/public/assets/
+/public/_resources/
+/public/resources/
+/public/error_log
+
+# Composer vendor folder
+/vendor/
+
+# SilverStripe 4 specific
+/.env
+/silverstripe.log
+/.graphql-generated/
+/public/_graphql/
