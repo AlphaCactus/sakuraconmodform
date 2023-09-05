@@ -68,7 +68,7 @@ The sliders could be colored Green for available, Orange for PNTW, or Red for NA
   - User must click/tap once or twice for every half hour interval they do not wish to be available.
      - An argument could be made that this is still easier and maybe even faster for user comprehension than multiple independent ranges.
      - Providing only hour spans instead of half-hour spans could reduce clicks and scroll.
-  - Users can select time spans which are only 1/2 hour long
+  - Users can select time spans which are only half hour long
      - Without some additional conditions, such as a limit on the number of spans (as with the 2023 method) or minimum span length, the user could select spans which are difficult to schedule.
   - Friday/Sunday have 34 options, Saturday has 48 options, resulting in quite a lot of scroll. An effort could be made to make it as vertically compact as possible while still being usable on mobile.
   - It may not be clear to the user if the time specified at the END of a span includes the following half-hour or not.
@@ -77,7 +77,7 @@ The sliders could be colored Green for available, Orange for PNTW, or Red for NA
      - The resulting spans can be shown in the availability summary where the actual end times can be clearly indicated.
 - Suggestions
   - Half-hour sliders could be slaved to hour sliders
-     - If a user taps an hour slider, the half hour after it matches the hour value.
+     - If a user taps an hour slider, the half hour after it also changes to match the hour value.
      - The user could then tap the half hour slider to change it independently from the hour.
      - Could reduce overall time to make changes, but also could increase confusion and user cognitive load.
      - This may be over optimising something that isn't that big of a deal.    
@@ -94,14 +94,15 @@ The sliders could be colored Green for available, Orange for PNTW, or Red for NA
       - This could be optional as we could assume 100% availability and only require the user to specify PNTW and NA.
   - PNTW time spans, by day of week limited to Sakura-con hours.
   - NA time spans, by day of week limited to Sakura-con hours.
-  - User comments describing their availability, one field day of week or for entire event? 
+  - User comments describing their availability
+     - `One field day of week or for entire event?` 
 - Email results to admins and retain them in a database. 
 
 ## Optional Extras
 - Provide a grade on the availability of the user
    - Outstanding - volunteer is 100% available
    - Excellent - volunteer is available > 30 hours.
-   - Good - volunteer is available > 22 hours
+   - Good - volunteer is available >= 22 hours
    - Poor - Volunteer is available < 22 hours
 - Provide a grade on the spans of the user
    - Are the spans few enough, long enough, and far enough apart? 
@@ -148,3 +149,4 @@ The sliders could be colored Green for available, Orange for PNTW, or Red for NA
 - [ ] What copy should be included to explain how to fill the form?
    - [ ] Explain that the half-hour intervals include the full half hour after the specified time.
    - For example, if a user selets 10:00 AM, that actually indicates 10:00 AM - 10:30 AM inclusive.
+- [ ] Are the hour requirements for the availability grading accurate? See Optional Extras.
