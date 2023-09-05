@@ -2,18 +2,17 @@
 
 namespace App\Model;
 
-use SilverStripe\CMS\Model\SiteTree;
+use Page;
 use SilverStripe\Forms\HeaderField;
-use SilverStripe\Forms\CheckboxField;
 
-class ContainerPage extends SiteTree
+
+class WorkPreferencesFormPage extends Page
 {
-	private static $table_name = 'ContainerPage';
-	private static $description = 'Page for holding other pages but cannot be linked to.';
+	private static $table_name = 'WorkPrefsFormPage';
+	private static $description = 'Form for asking panel mods their work preferences';
     private static $icon_class = 'font-icon-p-package';
 
 	private static $defaults = [
-		'ShowInSearch' => 0
 	];
 
     public function getCMSFields() {

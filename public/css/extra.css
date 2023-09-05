@@ -1,0 +1,13 @@
+.CompositeField {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.CompositeField > .listbox {
+    flex: 0 0 25%;
+}
+
+.CompositeField > .listbox select {
+    height: 600px;
+}
